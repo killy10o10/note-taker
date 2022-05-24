@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*, *::after, *::before {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  color: #121614;
+}
+
+.form-container {
+  max-width: 1000px;
+  text-align: center;
+}
+
+.form-container h1 {
+  font-size: 48px;
+  text-align: center;
+}
+
+.form-container h3 {
+  color: #33ca7f;
+  text-align: center;
+}
+
+.form-container .message {
+  margin: 20px 0 24px;
+  color: white;
+  padding: 24px;
+  text-align: center;
+}
+
+.form-container .message.success-message {
+  background-color: #33ca7f;
+  -webkit-box-shadow: 2px 4px 7px 2px rgba(51, 202, 127, 0.2);
+          box-shadow: 2px 4px 7px 2px rgba(51, 202, 127, 0.2);
+}
+
+.form-container .message.remove-message {
+  background-color: #446df6;
+  -webkit-box-shadow: 2px 4px 7px 2px rgba(68, 109, 246, 0.2);
+          box-shadow: 2px 4px 7px 2px rgba(68, 109, 246, 0.2);
+}
+
+.form-container .message.alert-message {
+  background-color: #e01541;
+  -webkit-box-shadow: 2px 4px 7px 2px rgba(224, 21, 65, 0.2);
+          box-shadow: 2px 4px 7px 2px rgba(224, 21, 65, 0.2);
+}
+/*# sourceMappingURL=style.css.map */
