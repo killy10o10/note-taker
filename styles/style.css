@@ -55,4 +55,113 @@ body {
   -webkit-box-shadow: 2px 4px 7px 2px rgba(224, 21, 65, 0.2);
           box-shadow: 2px 4px 7px 2px rgba(224, 21, 65, 0.2);
 }
+
+form {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 24px;
+  margin: 24px 0;
+  width: 100%;
+}
+
+form label, form input, form textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+form [for="title"], form [for="note"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 24px;
+  gap: 24px;
+  background-color: rgba(164, 177, 170, 0.2);
+  font-weight: bold;
+}
+
+form input, form textarea {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 80%;
+          flex: 1 1 80%;
+  border: 2px solid #a4b1aa;
+  padding: 10px;
+  color: #121614;
+  outline: none;
+}
+
+form [type="submit"] {
+  background-color: #33ca7f;
+  -webkit-box-shadow: 3px 5px 8px 2px rgba(51, 202, 127, 0.2);
+          box-shadow: 3px 5px 8px 2px rgba(51, 202, 127, 0.2);
+  font-size: 22px;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.note-container {
+  margin: 32px auto 16px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(280, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(280, 1fr));
+  gap: 24px;
+}
+
+.note-container .note {
+  border: 2px solid rgba(68, 109, 246, 0.2);
+  padding: 24px;
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+}
+
+.note-container .note-title {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.note-container .note-body {
+  overflow: hidden;
+  max-height: 128px;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+}
+
+.note-container .note-btns {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  gap: 10px;
+}
+
+.note-container .note-btns .note-btn {
+  padding: 10px 24px;
+  margin-top: 24px;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+}
+
+.note-container .note-btns .view-note {
+  background-color: #446df6;
+  -webkit-box-shadow: 3px 5px 8px 2px rgba(68, 109, 246, 0.2);
+          box-shadow: 3px 5px 8px 2px rgba(68, 109, 246, 0.2);
+}
+
+.note-container .note-btns .delete-note {
+  background-color: #e01541;
+  -webkit-box-shadow: 3px 5px 8px 2px rgba(224, 21, 65, 0.2);
+          box-shadow: 3px 5px 8px 2px rgba(224, 21, 65, 0.2);
+}
 /*# sourceMappingURL=style.css.map */

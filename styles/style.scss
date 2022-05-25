@@ -13,6 +13,12 @@ $danger: #e01541;
 $dark: #121614;
 $light: #a4b1aa;
 
+// box Shadow
+$boxs: 3px 5px 8px 2px;
+
+// transition
+$transition: all 250ms ease-out;
+
 body {
     font-family: 'Poppins', sans-serif;
     display: grid;
@@ -55,4 +61,97 @@ body {
       }  
     }
 }
+
+form {
+    display: grid;
+    grid-gap: 24px;
+    margin: 24px 0;
+    width: 100%;
+
+    label, input, textarea {
+        font-family: inherit;
+        font-size: inherit;
+    }
+
+    [for="title"], [for="note"] {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 24px;
+        gap: 24px;
+        background-color: rgba($light, .2);
+        font-weight: bold;
+    }
+
+    input, textarea {
+        flex: 1 1 80%;
+        border: 2px solid $light;
+        padding: 10px;
+        color: $dark;
+        outline: none;
+    }
+
+    [type="submit"] {
+        background-color: $success;
+        box-shadow: $boxs rgba($success, .2);
+        font-size: 22px;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+        transition: all 250ms ease-in-out;
+    } 
+}
+
+.note-container {
+    margin: 32px auto 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280, 1fr));
+    gap: 24px;
+    
+    
+    .note {
+        border: 2px solid rgba($primary, .2);
+        padding: 24px;
+        transition: all 250ms ease-out;
+    }
+
+    .note-title {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .note-body {
+        overflow: hidden;
+        max-height: 128px;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 4;
+    }
+
+    .note-btns {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 10px;
+
+        .note-btn {
+            padding: 10px 24px;
+            margin-top: 24px;
+            color: white;
+            cursor: pointer;
+            transition: $transition;
+        }
+    
+    .view-note {
+        background-color: $primary;
+        box-shadow: $boxs rgba($primary, .2);
+    }
+    .delete-note {
+        background-color: $danger;
+        box-shadow: $boxs rgba($danger, .2);
+    }
+    }
+
+}
+
 
