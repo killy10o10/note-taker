@@ -27,6 +27,66 @@ body {
     color: $dark;
 }
 
+.modal-container {
+    position: fixed;
+    display: grid;
+    place-items: center; 
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($dark, .2);
+    opacity: 0;
+    pointer-events: none;
+    transition: $transition;
+
+    &.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .modal {
+        max-width: 700px;
+        max-height: 80vh;
+        overflow: auto;
+        background-color: #fff;
+        border: 2px solid $dark;
+        padding: 32px;
+        position: relative;
+    }
+
+    .modal-title {
+        font-size: 32px;
+        line-height: 1.2;
+        margin-bottom: 16px;
+        max-width: 85%;
+    }
+
+    .modal-btn {
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        font-size: 32px;
+        background: none;
+        border: 2px solid $dark;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        box-shadow: $boxs rgba($dark, .2);
+        transition: $transition;
+        cursor: pointer;
+
+        &:hover, &focus {
+            outline: none;
+            border: 3px solid $light;
+            color: $light;
+            box-shadow: none;
+        }
+    }
+}
+
+
+
 .form-container {
     max-width: 1000px;
     text-align: center;
@@ -100,6 +160,10 @@ form {
         cursor: pointer;
         transition: all 250ms ease-in-out;
     } 
+
+    [type="submit"]:hover {
+        transform: translateY(-4px);
+    }
 }
 
 .note-container {
@@ -140,6 +204,10 @@ form {
             color: white;
             cursor: pointer;
             transition: $transition;
+        }
+
+        .note-btn:hover {
+            transform: translateY(-4px);
         }
     
     .view-note {

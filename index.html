@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,61 +8,79 @@
     <!-- Internaal CSS -->
     <link rel="stylesheet" href="./styles/style.css">
     <!-- External CSS (Font Awesome) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <!-- JavaScript -->
     <script defer src="notes.js"></script>
     <title>Killy's Note Taker</title>
 </head>
+
 <body>
     <div class="modal-container">
-        <div class="modal"></div>
-        <button class="modal-btn"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal">
+            <button class="modal-btn"><i class="fa-solid fa-xmark"></i></button>
+        <h2 class="modal-title">Title here</h2>
+        <p class="modal-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere adipisci voluptas voluptates nisi iure fugiat eveniet repellendus quia tenetur fugit aperiam nostrum dicta neque vel rem nihil dignissimos, minus, enim necessitatibus!</p>
+        </div>
+        
     </div>
     <div class="form-container">
         <h1>Killy's Note Taker</h1>
         <h3>Add a New note</h3>
         <form>
-           <label for="title">Title
-            <input type="text" id="title" placeholder="Enter a note title">
-           </label> 
-           <label for="note">Note
-            <textarea name="note" id="note" cols="30" rows="10" placeholder="Enter your note here"></textarea>
-           </label>
-           <button type="submit">Submit</button>
+            <label for="title">Title
+                <input type="text" id="title" placeholder="Enter a note title">
+            </label>
+            <label for="note">Note
+                <textarea name="note" id="note" cols="30" rows="10" placeholder="Enter your note here"></textarea>
+            </label>
+            <button type="submit">Submit</button>
         </form>
     </div>
     <div class="note-container">
         <!-- Note One -->
         <div class="note">
             <h2 class="note-title">Sample Note Title</h2>
-            <p class="note-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam quas laudantium, enim omnis excepturi vero vel unde perspiciatis voluptatum voluptatibus pariatur similique quia nihil inventore hic maxime asperiores commodi repudiandae?
-            Ex, ducimus maxime! Quidem quisquam voluptates sapiente mollitia ipsa voluptas vitae velit nobis quod! Qui eaque, ullam eos facere deserunt quia quisquam dicta. Corporis nobis illo excepturi impedit debitis libero.</p>
+            <p class="note-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam quas laudantium,
+                enim omnis excepturi vero vel unde perspiciatis voluptatum voluptatibus pariatur similique quia nihil
+                inventore hic maxime asperiores commodi repudiandae?
+                Ex, ducimus maxime! Quidem quisquam voluptates sapiente mollitia ipsa voluptas vitae velit nobis quod!
+                Qui eaque, ullam eos facere deserunt quia quisquam dicta. Corporis nobis illo excepturi impedit debitis
+                libero.</p>
             <div class="note-btns">
-                <button type="button" class="note-btn view-note">View Detail</button>
-                <button type="button" class="note-btn delete-note">View Note</button>
+                <button type="button" class="note-btn view-note">View Note</button>
+                <button type="button" class="note-btn delete-note">Delete Note</button>
             </div>
         </div>
         <!-- Note two -->
         <div class="note">
             <h2 class="note-title">Sample Note Title</h2>
-            <p class="note-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam quas laudantium, enim omnis excepturi vero vel unde perspiciatis voluptatum voluptatibus pariatur similique quia nihil inventore hic maxime asperiores commodi repudiandae?
-            Ex, ducimus maxime! Quidem quisquam voluptates sapiente mollitia ipsa voluptas vitae velit nobis quod! Qui eaque, ullam eos facere deserunt quia quisquam dicta. Corporis nobis illo excepturi impedit debitis libero.</p>
+            <p class="note-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam quas laudantium,
+                enim omnis excepturi vero vel unde perspiciatis voluptatum voluptatibus pariatur similique quia nihil
+                inventore hic maxime asperiores commodi repudiandae?
+                Ex, ducimus maxime! Quidem quisquam voluptates sapiente mollitia ipsa voluptas vitae velit nobis quod!
+                Qui eaque, ullam eos facere deserunt quia quisquam dicta. Corporis nobis illo excepturi impedit debitis
+                libero.</p>
             <div class="note-btns">
-                <button type="button" class="note-btn view-note">View Detail</button>
-                <button type="button" class="note-btn delete-note">View Note</button>
+                <button type="button" class="note-btn view-note">View Note</button>
+                <button type="button" class="note-btn delete-note">Delete Note</button>
             </div>
         </div>
         <!-- Note Three -->
         <div class="note">
             <h2 class="note-title">Sample Note Title</h2>
-            <p class="note-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam quas laudantium, enim omnis excepturi vero vel unde perspiciatis voluptatum voluptatibus pariatur similique quia nihil inventore hic maxime asperiores commodi repudiandae?
-            Ex, ducimus maxime! Quidem quisquam voluptates sapiente mollitia ipsa voluptas vitae velit nobis quod! Qui eaque, ullam eos facere deserunt quia quisquam dicta. Corporis nobis illo excepturi impedit debitis libero.</p>
+            <p class="note-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam quas laudantium,
+                enim omnis excepturi vero vel unde perspiciatis voluptatum voluptatibus pariatur similique quia nihil
+                inventore hic maxime asperiores commodi repudiandae?
+                Ex, ducimus maxime! Quidem quisquam voluptates sapiente mollitia ipsa voluptas vitae velit nobis quod!
+                Qui eaque, ullam eos facere deserunt quia quisquam dicta. Corporis nobis illo excepturi impedit debitis
+                libero.</p>
             <div class="note-btns">
-                <button type="button" class="note-btn view-note">View Detail</button>
-                <button type="button" class="note-btn delete-note">View Note</button>
+                <button type="button" class="note-btn view-note">View Note</button>
+                <button type="button" class="note-btn delete-note">Delete Note</button>
             </div>
         </div>
     </div>
     <div class="note-container"></div>
 </body>
+
 </html>

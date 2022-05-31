@@ -16,6 +16,69 @@ body {
   color: #121614;
 }
 
+.modal-container {
+  position: fixed;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(18, 22, 20, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+}
+
+.modal-container.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-container .modal {
+  max-width: 700px;
+  max-height: 80vh;
+  overflow: auto;
+  background-color: #fff;
+  border: 2px solid #121614;
+  padding: 32px;
+  position: relative;
+}
+
+.modal-container .modal-title {
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  max-width: 85%;
+}
+
+.modal-container .modal-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  font-size: 32px;
+  background: none;
+  border: 2px solid #121614;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  -webkit-box-shadow: 3px 5px 8px 2px rgba(18, 22, 20, 0.2);
+          box-shadow: 3px 5px 8px 2px rgba(18, 22, 20, 0.2);
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+  cursor: pointer;
+}
+
+.modal-container .modal-btn:hover, .modal-container .modal-btnfocus {
+  outline: none;
+  border: 3px solid #a4b1aa;
+  color: #a4b1aa;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .form-container {
   max-width: 1000px;
   text-align: center;
@@ -106,6 +169,11 @@ form [type="submit"] {
   transition: all 250ms ease-in-out;
 }
 
+form [type="submit"]:hover {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+
 .note-container {
   margin: 32px auto 16px;
   display: -ms-grid;
@@ -151,6 +219,11 @@ form [type="submit"] {
   cursor: pointer;
   -webkit-transition: all 250ms ease-out;
   transition: all 250ms ease-out;
+}
+
+.note-container .note-btns .note-btn:hover {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
 }
 
 .note-container .note-btns .view-note {
