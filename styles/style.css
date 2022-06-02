@@ -1,15 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-*, *::after, *::before {
+/* stylelint-disable csstree/validator */
+*,
+*::after,
+*::before {
   border: 0;
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  display: -ms-grid;
+  font-family: "Poppins", sans-serif;
   display: grid;
   place-items: center;
   padding: 32px;
@@ -18,7 +19,6 @@ body {
 
 .modal-container {
   position: fixed;
-  display: -ms-grid;
   display: grid;
   place-items: center;
   left: 0;
@@ -28,7 +28,6 @@ body {
   background-color: rgba(18, 22, 20, 0.2);
   opacity: 0;
   pointer-events: none;
-  -webkit-transition: all 250ms ease-out;
   transition: all 250ms ease-out;
 }
 
@@ -64,19 +63,17 @@ body {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  -webkit-box-shadow: 3px 5px 8px 2px rgba(18, 22, 20, 0.2);
-          box-shadow: 3px 5px 8px 2px rgba(18, 22, 20, 0.2);
-  -webkit-transition: all 250ms ease-out;
+  box-shadow: 3px 5px 8px 2px rgba(18, 22, 20, 0.2);
   transition: all 250ms ease-out;
   cursor: pointer;
 }
 
-.modal-container .modal-btn:hover, .modal-container .modal-btnfocus {
+.modal-container .modal-btn:hover,
+.modal-container .modal-btnfocus {
   outline: none;
   border: 3px solid #a4b1aa;
   color: #a4b1aa;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .form-container {
@@ -103,90 +100,77 @@ body {
 
 .form-container .message.success-message {
   background-color: #33ca7f;
-  -webkit-box-shadow: 2px 4px 7px 2px rgba(51, 202, 127, 0.2);
-          box-shadow: 2px 4px 7px 2px rgba(51, 202, 127, 0.2);
+  box-shadow: 2px 4px 7px 2px rgba(51, 202, 127, 0.2);
 }
 
 .form-container .message.remove-message {
   background-color: #446df6;
-  -webkit-box-shadow: 2px 4px 7px 2px rgba(68, 109, 246, 0.2);
-          box-shadow: 2px 4px 7px 2px rgba(68, 109, 246, 0.2);
+  box-shadow: 2px 4px 7px 2px rgba(68, 109, 246, 0.2);
 }
 
 .form-container .message.alert-message {
   background-color: #e01541;
-  -webkit-box-shadow: 2px 4px 7px 2px rgba(224, 21, 65, 0.2);
-          box-shadow: 2px 4px 7px 2px rgba(224, 21, 65, 0.2);
+  box-shadow: 2px 4px 7px 2px rgba(224, 21, 65, 0.2);
 }
 
 form {
-  display: -ms-grid;
   display: grid;
   grid-gap: 24px;
   margin: 24px 0;
   width: 100%;
 }
 
-form label, form input, form textarea {
+form label,
+form input,
+form textarea {
   font-family: inherit;
   font-size: inherit;
 }
 
-form [for="title"], form [for="note"] {
-  display: -webkit-box;
-  display: -ms-flexbox;
+form [for=title],
+form [for=note] {
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 24px;
   gap: 24px;
   background-color: rgba(164, 177, 170, 0.2);
   font-weight: bold;
 }
 
-form input, form textarea {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 80%;
-          flex: 1 1 80%;
+form input,
+form textarea {
+  flex: 1 1 80%;
   border: 2px solid #a4b1aa;
   padding: 10px;
   color: #121614;
   outline: none;
 }
 
-form [type="submit"] {
+form [type=submit] {
   background-color: #33ca7f;
-  -webkit-box-shadow: 3px 5px 8px 2px rgba(51, 202, 127, 0.2);
-          box-shadow: 3px 5px 8px 2px rgba(51, 202, 127, 0.2);
+  box-shadow: 3px 5px 8px 2px rgba(51, 202, 127, 0.2);
   font-size: 22px;
   color: white;
   padding: 10px;
   cursor: pointer;
-  -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
 }
 
-form [type="submit"]:hover {
-  -webkit-transform: translateY(-4px);
-          transform: translateY(-4px);
+form [type=submit]:hover {
+  transform: translateY(-4px);
 }
 
 .note-container {
   margin: 32px auto 16px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(280, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(280, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280, 1fr));
   gap: 24px;
 }
 
 .note-container .note {
   border: 2px solid rgba(68, 109, 246, 0.2);
   padding: 24px;
-  -webkit-transition: all 250ms ease-out;
   transition: all 250ms ease-out;
 }
 
@@ -205,10 +189,8 @@ form [type="submit"]:hover {
 }
 
 .note-container .note-btns {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
+  grid-template-columns: auto auto;
   gap: 10px;
 }
 
@@ -217,24 +199,19 @@ form [type="submit"]:hover {
   margin-top: 24px;
   color: white;
   cursor: pointer;
-  -webkit-transition: all 250ms ease-out;
   transition: all 250ms ease-out;
 }
 
 .note-container .note-btns .note-btn:hover {
-  -webkit-transform: translateY(-4px);
-          transform: translateY(-4px);
+  transform: translateY(-4px);
 }
 
 .note-container .note-btns .view-note {
   background-color: #446df6;
-  -webkit-box-shadow: 3px 5px 8px 2px rgba(68, 109, 246, 0.2);
-          box-shadow: 3px 5px 8px 2px rgba(68, 109, 246, 0.2);
+  box-shadow: 3px 5px 8px 2px rgba(68, 109, 246, 0.2);
 }
 
 .note-container .note-btns .delete-note {
   background-color: #e01541;
-  -webkit-box-shadow: 3px 5px 8px 2px rgba(224, 21, 65, 0.2);
-          box-shadow: 3px 5px 8px 2px rgba(224, 21, 65, 0.2);
+  box-shadow: 3px 5px 8px 2px rgba(224, 21, 65, 0.2);
 }
-/*# sourceMappingURL=style.css.map */
