@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 /* stylelint-disable csstree/validator */
 *,
 *::after,
@@ -19,6 +20,7 @@ body {
 
 .modal-container {
   position: fixed;
+  z-index: 1;
   display: grid;
   place-items: center;
   left: 0;
@@ -39,7 +41,6 @@ body {
 .modal-container .modal {
   max-width: 700px;
   max-height: 80vh;
-  overflow: auto;
   background-color: #fff;
   border: 2px solid #121614;
   padding: 32px;
@@ -127,8 +128,8 @@ form textarea {
   font-size: inherit;
 }
 
-form [for=title],
-form [for=note] {
+form [for="title"],
+form [for="note"] {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -147,7 +148,7 @@ form textarea {
   outline: none;
 }
 
-form [type=submit] {
+form [type="submit"] {
   background-color: #33ca7f;
   box-shadow: 3px 5px 8px 2px rgba(51, 202, 127, 0.2);
   font-size: 22px;
@@ -157,7 +158,7 @@ form [type=submit] {
   transition: all 250ms ease-in-out;
 }
 
-form [type=submit]:hover {
+form [type="submit"]:hover {
   transform: translateY(-4px);
 }
 
@@ -171,27 +172,35 @@ form [type=submit]:hover {
 .note-container .note {
   border: 2px solid rgba(68, 109, 246, 0.2);
   padding: 24px;
+  height: 250px;
   transition: all 250ms ease-out;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  position: relative;
 }
 
 .note-container .note-title {
   font-size: 32px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .note-container .note-body {
   overflow: hidden;
-  max-height: 128px;
   -webkit-box-orient: vertical;
   display: -webkit-box;
   text-overflow: ellipsis;
   -webkit-line-clamp: 4;
+  text-align: center;
 }
 
 .note-container .note-btns {
-  display: grid;
-  grid-template-columns: auto auto;
+  position: absolute;
+  display: flex;
   gap: 10px;
+  bottom: 25px;
+  align-self: center;
 }
 
 .note-container .note-btns .note-btn {
@@ -215,3 +224,5 @@ form [type=submit]:hover {
   background-color: #e01541;
   box-shadow: 3px 5px 8px 2px rgba(224, 21, 65, 0.2);
 }
+
+/*# sourceMappingURL=style.css.map */

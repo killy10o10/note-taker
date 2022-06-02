@@ -31,6 +31,7 @@ body {
 
 .modal-container {
   position: fixed;
+  z-index: 1;
   display: grid;
   place-items: center;
   left: 0;
@@ -50,7 +51,6 @@ body {
   .modal {
     max-width: 700px;
     max-height: 80vh;
-    overflow: auto;
     background-color: #fff;
     border: 2px solid $dark;
     padding: 32px;
@@ -182,27 +182,35 @@ form {
   .note {
     border: 2px solid rgba($primary, 0.2);
     padding: 24px;
+    height: 250px;
     transition: all 250ms ease-out;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    position: relative;
   }
 
   .note-title {
     font-size: 32px;
     margin-bottom: 10px;
+    text-align: center;
   }
 
   .note-body {
     overflow: hidden;
-    max-height: 128px;
     -webkit-box-orient: vertical;
     display: -webkit-box;
     text-overflow: ellipsis;
     -webkit-line-clamp: 4;
+    text-align: center;
   }
 
   .note-btns {
-    display: grid;
-    grid-template-columns: auto auto;
+    position: absolute;
+    display: flex;
     gap: 10px;
+    bottom: 25px;
+    align-self: center;
 
     .note-btn {
       padding: 10px 24px;
