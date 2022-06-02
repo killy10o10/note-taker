@@ -176,7 +176,7 @@ form {
 .note-container {
   margin: 32px auto 16px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280, 1fr));
+  grid-template-columns: repeat(3, 350px);
   gap: 24px;
 
   .note {
